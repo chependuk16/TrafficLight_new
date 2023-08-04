@@ -20,15 +20,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-UE-Pdq">
                                 <rect key="frame" x="110" y="60" width="100" height="386"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nah-Od-V5j">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nah-Od-V5j">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoJ-Es-pRL">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoJ-Es-pRL">
                                         <rect key="frame" x="0.0" y="143" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-go-wBp">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FO9-go-wBp">
                                         <rect key="frame" x="0.0" y="286" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
@@ -48,6 +48,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="HeK-iD-hNF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +62,12 @@
                             <constraint firstItem="cmn-UE-Pdq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zNu-Qf-xki"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="FO9-go-wBp" id="I5D-wg-n0q"/>
+                        <outlet property="redView" destination="nah-Od-V5j" id="i2P-bn-PNN"/>
+                        <outlet property="switchButton" destination="gc1-fM-k5z" id="b3o-Ex-8iu"/>
+                        <outlet property="yellowView" destination="NoJ-Es-pRL" id="q75-H8-LNQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
